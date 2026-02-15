@@ -1,0 +1,14 @@
+{
+    "telemetry.machineId": "dbd4ad09218faae4e05bb3f7c6d8a3f46ad361d3afe92b9c30485d4e8c860362",
+    "openedPathsList": {
+        "workspaces3": [
+            {
+                "id": "ce3580705a96f796fea747d0046d9475",
+                "configURIPath": "file:///d%3A/Code/phasevr/.metadata/codemix.code-workspace"
+            }
+        ],
+        "files2": []
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#221a0f"
+}

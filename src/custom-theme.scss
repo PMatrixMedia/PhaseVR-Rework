@@ -1,0 +1,24 @@
+@use '@angular/material' as mat;
+
+// Include the common styles for Angular Material
+@include mat.core();
+
+// Define the theme using Material 3 (red primary palette)
+html {
+  color-scheme: light dark;
+  @include mat.theme((
+    color: mat.$red-palette,
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}

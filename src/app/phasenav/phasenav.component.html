@@ -1,0 +1,54 @@
+<mat-sidenav-container class="sidenav-container" autosize>
+    <mat-sidenav #sidenav class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+
+        <mat-toolbar>
+
+            <mat-icon aria-hidden="false" aria-label="PhaseHomeIcon">home</mat-icon>
+            <a mat-raised-button href='http://phasematrixmedia.online' target="_blank" rel="noopener noreferrer">PhaseMatrix</a>
+
+        </mat-toolbar>
+        <button mat-flat-button [matMenuTriggerFor]="menu">Virtual Reality</button>
+        <mat-menu #menu="matMenu">
+            <a mat-flat-button href="http://github.com/PMatrixMedia/vrdashboard" target="_blank" rel="noopener noreferrer">vrdashboard</a>
+            <button mat-menu-item>
+          <a mat-flat-button  href="https://objective-ritchie-0b3d4e.netlify.com/" target="_blank" rel="noopener noreferrer">BasicVRapp</a>
+          </button>
+            <button mat-menu-item>React/A-Frame</button>
+            <a mat-flat-button href="https://02q2s.sse.codesandbox.io/" target="_blank" rel="noopener noreferrer">A-Frame/React</a>
+        </mat-menu>
+        <mat-nav-list>
+            <a mat-list-item href="https://www.facebook.com/Phasematrixmedia-108166067256262/" target="_blank" rel="noopener noreferrer">Blog</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            @if (isHandset$ | async) {
+            <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="sidenav.toggle()">
+              <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+          }
+            <a mat-raised-button color="warn" routerLink="/" (click)="sidenav.toggle()">
+                <span>PhaseVR</span>
+            </a>
+            <a mat-raised-button color="warn" routerLink="/" (click)="sidenav.toggle()">
+                <span>Drones</span>
+            </a>
+            <a mat-raised-button color="warn" routerLink="/" (click)="sidenav.toggle()">
+                <span>Shutterstock</span>
+            </a>
+
+        </mat-toolbar>
+        <div style="text-align:left">
+            <h1> Welcome to My Project Site!</h1>
+        </div>
+        <div style="text-align:left">
+            <h2 id="xhead">This site will have information on current projects I am working on as well as services I provide. </h2>
+            <h3>I have an up coming announcement soon, as I will be adding drone services like aerial Photography & 3D mapping more on that with its own content page stay tuned.</h3>
+        </div>
+        <div>
+            <div class="app-cube">
+                <app-cube></app-cube>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
