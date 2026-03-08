@@ -27,25 +27,29 @@
               <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
             </button>
           }
-            <a mat-raised-button color="warn" routerLink="/" (click)="sidenav.toggle()">
+            <a mat-raised-button color="warn" routerLink="/" (click)="sidenav.toggle()" class="stagger-el">
                 <span>PhaseVR</span>
             </a>
-            <a mat-raised-button color="warn" routerLink="/" (click)="sidenav.toggle()">
+            <a mat-raised-button color="warn" routerLink="/" (click)="sidenav.toggle()" class="stagger-el">
                 <span>Drones</span>
             </a>
-            <a mat-raised-button color="warn" routerLink="/" (click)="sidenav.toggle()">
+            <a mat-raised-button color="warn" routerLink="/" (click)="sidenav.toggle()" class="stagger-el">
                 <span>Shutterstock</span>
             </a>
 
         </mat-toolbar>
-        <div style="text-align:left">
-            <h1> Welcome to My Project Site!</h1>
+        <div style="text-align:left" class="stagger-el word-container">
+            <h1>
+                <span class="word">Welcome </span><span class="word">to </span><span class="word">My </span><span class="word">Project </span><span class="word">Site!</span>
+            </h1>
         </div>
-        <div style="text-align:left">
-            <h2 id="xhead">This site will have information on current projects I am working on as well as services I provide. </h2>
+        <div style="text-align:left" class="stagger-el word-container">
+            <h2 id="xhead">
+                <span class="word">This </span><span class="word">site </span><span class="word">will </span><span class="word">have </span><span class="word">information </span><span class="word">on </span><span class="word">current </span><span class="word">projects </span><span class="word">I </span><span class="word">am </span><span class="word">working </span><span class="word">on </span><span class="word">as </span><span class="word">well </span><span class="word">as </span><span class="word">services </span><span class="word">I </span><span class="word">provide.</span>
+            </h2>
             <h3>Update:  I have updated the site to the most recent version of angular.  There will be alot more updates as well as more things to come as I update the site on all the new things that will be available and upcoming.</h3>
         </div>
-        <div>
+        <div class="stagger-el">
             <div class="app-cube">
                 <app-cube></app-cube>
             </div>
