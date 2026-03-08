@@ -1,4 +1,3 @@
-import { LayoutModule } from '@angular/cdk/layout';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,7 +19,6 @@ describe('PhasenavComponent', () => {
       declarations: [PhasenavComponent, CubeComponent],
       imports: [
         NoopAnimationsModule,
-        LayoutModule,
         MatButtonModule,
         MatIconModule,
         MatListModule,

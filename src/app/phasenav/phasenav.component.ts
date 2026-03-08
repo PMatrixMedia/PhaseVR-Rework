@@ -25,25 +25,41 @@ export class PhasenavComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     const el = this.elementRef.nativeElement;
-    const staggerItems = el.querySelectorAll('.stagger-el:not(.word-container)');
+    const staggerItems = el.querySelectorAll('.stagger-el');
+    const navLinks = el.querySelectorAll('.nav-link');
     const words = el.querySelectorAll('.word');
 
+    // Stagger elements over 2 seconds total
     if (staggerItems.length) {
+      const itemCount = staggerItems.length;
+      const duration = 0.5;
+      const staggerDelay = (2 - duration) / Math.max(1, itemCount - 1);
       gsap.fromTo(staggerItems, { opacity: 0, y: 20 }, {
         opacity: 1,
         y: 0,
-        duration: 0.5,
-        stagger: 0.3,
+        duration,
+        stagger: staggerDelay,
         ease: 'power2.out',
       });
     }
 
-    if (words.length) {
-      gsap.fromTo(words, { x: 200, opacity: 0 }, {
+    // Nav icons slide in from right side of page to left
+    if (navLinks.length) {
+      gsap.fromTo(navLinks, { x: 400, opacity: 0 }, {
         x: 0,
         opacity: 1,
-        duration: 0.4,
-        stagger: 0.08,
+        duration: 0.6,
+        stagger: 0.12,
+        ease: 'power2.out',
+      });
+    }
+
+    // Words appear one at a time in random order
+    if (words.length) {
+      gsap.fromTo(words, { opacity: 0 }, {
+        opacity: 1,
+        duration: 0.35,
+        stagger: { from: 'random', each: 0.05 },
         ease: 'power2.out',
       });
     }

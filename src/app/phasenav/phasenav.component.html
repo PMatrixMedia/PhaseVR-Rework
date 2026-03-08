@@ -1,13 +1,13 @@
 <mat-sidenav-container class="sidenav-container" autosize>
     <mat-sidenav #sidenav class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
 
-        <mat-toolbar>
+        <mat-toolbar class="stagger-el">
 
             <mat-icon aria-hidden="false" aria-label="PhaseHomeIcon">home</mat-icon>
             <a mat-raised-button href='http://phasematrixmedia.online' target="_blank" rel="noopener noreferrer">PhaseMatrix</a>
 
         </mat-toolbar>
-        <button mat-flat-button [matMenuTriggerFor]="menu">Virtual Reality</button>
+        <button mat-flat-button class="stagger-el" [matMenuTriggerFor]="menu">Virtual Reality</button>
         <mat-menu #menu="matMenu">
             <a mat-flat-button href="http://github.com/PMatrixMedia/vrdashboard" target="_blank" rel="noopener noreferrer">vrdashboard</a>
             <button mat-menu-item>
@@ -16,7 +16,7 @@
             <button mat-menu-item>React/A-Frame</button>
             <a mat-flat-button href="https://02q2s.sse.codesandbox.io/" target="_blank" rel="noopener noreferrer">A-Frame/React</a>
         </mat-menu>
-        <mat-nav-list>
+        <mat-nav-list class="stagger-el">
             <a mat-list-item href="https://www.facebook.com/Phasematrixmedia-108166067256262/" target="_blank" rel="noopener noreferrer">Blog</a>
         </mat-nav-list>
     </mat-sidenav>
@@ -27,13 +27,13 @@
               <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
             </button>
           }
-            <a mat-raised-button color="warn" routerLink="/" (click)="sidenav.toggle()" class="stagger-el">
+            <a mat-raised-button color="warn" routerLink="/" (click)="sidenav.toggle()" class="nav-link">
                 <span>PhaseVR</span>
             </a>
-            <a mat-raised-button color="warn" routerLink="/" (click)="sidenav.toggle()" class="stagger-el">
+            <a mat-raised-button color="warn" routerLink="/" (click)="sidenav.toggle()" class="nav-link">
                 <span>Drones</span>
             </a>
-            <a mat-raised-button color="warn" routerLink="/" (click)="sidenav.toggle()" class="stagger-el">
+            <a mat-raised-button color="warn" routerLink="/" (click)="sidenav.toggle()" class="nav-link">
                 <span>Shutterstock</span>
             </a>
 
@@ -47,7 +47,7 @@
             <h2 id="xhead">
                 <span class="word">This </span><span class="word">site </span><span class="word">will </span><span class="word">have </span><span class="word">information </span><span class="word">on </span><span class="word">current </span><span class="word">projects </span><span class="word">I </span><span class="word">am </span><span class="word">working </span><span class="word">on </span><span class="word">as </span><span class="word">well </span><span class="word">as </span><span class="word">services </span><span class="word">I </span><span class="word">provide.</span>
             </h2>
-            <h3>Update:  I have updated the site to the most recent version of angular.  There will be alot more updates as well as more things to come as I update the site on all the new things that will be available and upcoming.</h3>
+            <h3><span class="word">Update: </span><span class="word">I </span><span class="word">have </span><span class="word">updated </span><span class="word">the </span><span class="word">site </span><span class="word">to </span><span class="word">the </span><span class="word">most </span><span class="word">recent </span><span class="word">version </span><span class="word">of </span><span class="word">angular. </span><span class="word">There </span><span class="word">will </span><span class="word">be </span><span class="word">alot </span><span class="word">more </span><span class="word">updates </span><span class="word">as </span><span class="word">well </span><span class="word">as </span><span class="word">more </span><span class="word">things </span><span class="word">to </span><span class="word">come </span><span class="word">as </span><span class="word">I </span><span class="word">update </span><span class="word">the </span><span class="word">site </span><span class="word">on </span><span class="word">all </span><span class="word">the </span><span class="word">new </span><span class="word">things </span><span class="word">that </span><span class="word">will </span><span class="word">be </span><span class="word">available </span><span class="word">and </span><span class="word">upcoming.</span></h3>
         </div>
         <div class="stagger-el">
             <div class="app-cube">

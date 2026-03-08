@@ -31,7 +31,7 @@ export class CubeComponent implements AfterViewInit {
             gsap.to(wrap, {
               rotationY: '+=360',
               rotationX: 45,
-              duration: 8,
+              duration: 4,
               repeat: -1,
               ease: 'none',
             });

@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { PhasenavComponent } from './phasenav/phasenav.component';
 import { CubeComponent } from './cube/cube.component';
 import { TargetBlankDirective } from './target-blank.directive';
-import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -19,7 +18,6 @@ describe('AppComponent', () => {
       imports: [
         RouterTestingModule,
         NoopAnimationsModule,
-        LayoutModule,
         MatButtonModule,
         MatIconModule,
         MatListModule,
